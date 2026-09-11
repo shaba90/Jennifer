@@ -35,6 +35,101 @@
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f4f4f5;
+    margin: 0;
+    padding: 40px;
+  }
+
+  /* Hide the checkbox that controls visibility */
+  #notice-toggle {
+    display: none;
+  }
+
+  /* Overlay: visible by default (checkbox starts checked) */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* Show overlay automatically while checkbox is checked */
+  #notice-toggle:checked ~ .overlay {
+    display: flex;
+  }
+
+  /* Popup box */
+  .popup {
+    background: #fff;
+    max-width: auto;
+    width: 90%;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    text-align: left;
+  }
+
+  .popup h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #18181b;
+  }
+
+  .popup p {
+    color: #52525b;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    text-decoration: none;
+    color: #71717a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    color: #18181b;
+  }
+
+  .open-btn {
+    display: inline-block;
+    background: #18181b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+
+  .open-btn:hover {
+    background: #27272a;
+  }
+  .overlay {
+  
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+
+}
+
+.popup {
+  
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.15);
+  
+}
+</style>
 <body>
 
     <!-- Preloader Start -->
@@ -158,12 +253,36 @@
         </div>
     </div>
     <!-- Page Header End -->
-<div id="onload-modal" class="modal">
-  <a href="http://google.lk" target="_blank">
-    <img class="popup-img" src="https://www.google.lk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-  </a>
-</div>
-    
+
+    <!-- Checked by default so the popup shows automatically on page load -->
+  <input type="checkbox" id="notice-toggle" checked>
+
+  <div class="overlay" >
+    <div class="popup container"  >
+      <label for="notice-toggle" class="close-btn" ><a href="index.html"> &times;</label></a> 
+      
+      <h2 style="color: #D2393E; font-size: 24px;">This section is temporarily paused as we take our message directly to the people and intensify our campaign for victory in the 2027 General Election.</h2>
+     <br><br> <p>The mission is clear: Progress. Empowerment. True Representation.
+Hon.<br> <br>Jennifer Osarumwense Iyamu is ready to deliver purposeful leadership and real change for Egor Constituency.
+
+This is not just a campaign—it is a movement for the future of our people.
+
+Your voice matters. Your vote counts.<br><br>
+Vote Hon. Jennifer Osarumwense Iyamu for Edo State House of Assembly (Egor Constituency) 2027.
+
+Forward Ever. Backward Never.
+Victory for the People. Power to Egor.<br><br>
+
+Full updates and detailed information will be available after the election.
+
+Thank you for standing with us.</p>
+      <!-- <h2 class="text-anime-style-2" data-cursor="-opaque" >This is an important notice.  <span>Please read this message carefully before continuing.</span> and informed</h2> -->
+
+    </div>
+  </div>
+
+  <!-- Optional: reopen the notice -->
+  <label for="notice-toggle" class="open-btn">Show Notice</label>
 
     <!-- Footer Start -->
     <footer class="main-footer">

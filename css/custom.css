@@ -5511,10 +5511,3 @@ header.main-header .header-sticky.active{
     }
 }
 
-#onload-modal img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin:auto;
-    padding:50px;
-}
