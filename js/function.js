@@ -350,3 +350,9 @@
 	/* Our Goal Active End */
 	
 })(jQuery);
+
+$(document).ready(function(){
+$('#onload-modal').modal({
+    fadeDuration: 250
+  });
+});
