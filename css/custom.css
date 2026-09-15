@@ -5548,15 +5548,15 @@ header.main-header .header-sticky.active{
       /* for mobile */
       @media screen and (max-width: 767px) {
           .whatsapp-icon {
-              margin-top: 10px;
+              margin-top: 5px;
           }
 
           .whatsapp_float {
-              width: 60px;
-              height: 60px;
-              bottom: 159px;
+              width: 50px;
+              height: 50px;
+              bottom: 59px;
               right: 20px;
-              font-size: 50px;
+              font-size: 40px;
           }
       }
 
